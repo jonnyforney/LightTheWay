@@ -1,0 +1,90 @@
+/* Overrides */
+.in, .out {
+    
+}
+/* Global tags */
+body {
+    background-color: lightgray;
+}
+
+ul {
+	list-style: none;
+	padding: 0px;
+}
+
+label {
+	text-align: right;
+	margin: 0px !important;
+}
+
+/* class */
+.main-center {
+	vertical-align: middle;
+	margin-top: 25%;
+    text-align: center;
+}
+
+.center {
+	text-align: center;
+}
+.hide {
+	display: none;
+}
+.link-plain {
+	text-decoration: none;
+	color: inherit;
+}
+
+li.top-menu {
+	display: inline;
+	list-style-type: none;
+}
+.nav-section {
+	height: 50%;
+	width: 50%;
+}
+.right {
+	float: left;
+}
+.left {
+	float: right;
+}
+.top-middle {
+	text-align: center;
+}
+.top-menu-button {
+	font-size: 12px;
+}
+
+.clearfix {
+	overflow: auto;
+}
+
+.icon-small {
+	height: 15px;
+	width: 15px;
+}
+
+.icon-medium {
+	height: 70px;
+	width: 25%;
+}
+.nav {
+	background-image: url("../img/nav.gif");
+	background-size: 100% auto;
+	position: fixed;
+	height: 30%;
+	width: 100%;
+}
+.display {
+	position: fixed;
+	overflow: scroll;
+	margin-top: 53.5%;
+	height: 52%;
+}
+.footer {
+	position: absolute;
+	width: 100%;
+	bottom: 0px;
+}
+/* ids */
