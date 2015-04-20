@@ -32,6 +32,7 @@ function checkUser() {
 function saveUser(user) {
 	window.localStorage.setItem("username", user);
 	loadPage('#home');
+	alert("Welcome, " + user);
 }
 
 function show(n) {
