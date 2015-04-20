@@ -5,10 +5,10 @@
 	<body>
         <div data-role="page" id="load" class="cyan">
             <div data-role="main" class="ui-content">
-                <div class="main-center">
-                    <h1 id="logo">Hello World</h1> 
+                <div class="main-center bg-white">
+                    <img src="img/logo.tif" id="logo" />
                     <a href="#login" id="log" class="hide"></a> 
-                </div>              
+                </div>             
             </div>     
         </div>      
         <div data-role="page" id="login"> 
@@ -27,17 +27,16 @@
             <div data-role="header">
                 <h1><span style="color: #add8e6;">Light</span> the <span style="color: #000080;">Way</span></h1>
             </div>
-            	<div class="nav">
-                    <div class="nav-section left orange" style="" onclick="show(1)"></div>
-                    <div class="nav-section right" style="background-color: green;" onclick="show(2)"></div>
-                    <div class="nav-section center-margin" style="background-color: red;" onclick="show(-1)"></div>
-                    <div class="nav-section left" style="background-color: yellow;" onclick="show(3)"></div>
-                    <div class="nav-section right" style="background-color: orange;" onclick="show(4)"></div>
-                </div>
-            	<div class="display"></div>                        
-            <div data-role="footer" class="footer">
-                <p id="test"></p>
-                <form id="comment_form" method="POST" action="">
+        	<div class="nav">
+                <div class="nav-section left bg-orange" onclick="show(1)"></div>
+                <div class="nav-section right bg-cyan" onclick="show(2)"></div>
+                <div class="nav-section center-margin" style="background-color: red;" onclick="show(-1)"></div>
+                <div class="nav-section left bg-green-blue" onclick="show(3)"></div>
+                <div class="nav-section right bg-yellow" onclick="show(4)"></div>
+            </div>
+        	<div class="display"></div>                        
+            <div data-role="footer" class="footer">                
+                <form id="comment_form" onsubmit="addComment()">
                     <input type="text" id="comment" name="comment" placeholder="Comment" />  
                 </form>         
             </div>        

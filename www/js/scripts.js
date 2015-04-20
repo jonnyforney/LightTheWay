@@ -15,6 +15,11 @@ function loadLogo() {
     }, 500);
 }
 
+function addComment() {
+	var comment = $('#comment').val();
+	window.localStorage.setItem("comments",comment);
+}
+
 function checkUser() {
 	var user = $('#username').val();
 	if(user != '') {
@@ -57,5 +62,5 @@ function getUserName() {
 }
 
 function loadPage(page) {
-	$.mobile.changePage("#home");
+	$.mobile.changePage(page);
 }
