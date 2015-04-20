@@ -1,3 +1,26 @@
+/* variables */
+:root {
+	--main-cyan: #005A5F;
+	--main-green-blue: #95D4C5;
+	--main-white-gray: #005A5F;
+	--main-orange: #F89C3E;
+	--main-yellow: #FFCD5B;
+}
+.cyan {
+	color: #005A5F;
+}
+.green-blue {
+	color: #95D4C5;
+}
+.white-gray {
+	color: #005A5F;
+}
+.orange {
+	color: #F89C3E;
+}
+.yellow {
+	color: #FFCD5B;
+}
 /* Overrides */
 .in, .out {
     
@@ -20,12 +43,15 @@ label {
 /* class */
 .main-center {
 	vertical-align: middle;
-	margin-top: 25%;
+	margin-top: 50%;
     text-align: center;
 }
-
 .center {
 	text-align: center;
+}
+.center-margin {
+	margin: auto;
+	margin-top: 15%;
 }
 .hide {
 	display: none;
@@ -33,11 +59,6 @@ label {
 .link-plain {
 	text-decoration: none;
 	color: inherit;
-}
-
-li.top-menu {
-	display: inline;
-	list-style-type: none;
 }
 .nav-section {
 	height: 50%;
@@ -49,25 +70,8 @@ li.top-menu {
 .left {
 	float: right;
 }
-.top-middle {
-	text-align: center;
-}
-.top-menu-button {
-	font-size: 12px;
-}
-
 .clearfix {
 	overflow: auto;
-}
-
-.icon-small {
-	height: 15px;
-	width: 15px;
-}
-
-.icon-medium {
-	height: 70px;
-	width: 25%;
 }
 .nav {
 	background-image: url("../img/nav.gif");
@@ -80,7 +84,7 @@ li.top-menu {
 	position: fixed;
 	overflow: scroll;
 	margin-top: 53.5%;
-	height: 52%;
+	height: 50%;
 }
 .footer {
 	position: absolute;
