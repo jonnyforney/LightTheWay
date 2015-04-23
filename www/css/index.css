@@ -36,10 +36,15 @@
 .in, .out {
     
 }
+h3 {
+	padding-top: 25px;
+	margin: 0px;
+}
 /* Global tags */
 ul {
 	list-style: none;
 	padding: 0px;
+	margin: 0px;
 }
 label {
 	text-align: right;
@@ -99,7 +104,10 @@ label {
 }
 .login-input {
 	border-radius: 50px;
-	width: 50%;
+	width: 60%;
+	height: 25px;
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
 .nav {
 	background-image: url("../img/nav.gif");
@@ -124,4 +132,11 @@ label {
 	width: 90%;
 	height: 35%;
 }
-
+#new_user {
+	color: black; 
+	font-size: 12px; 
+	font-weight: normal; 
+	text-shadow: none; 
+	float: right; 
+	margin-right: 23%;
+}

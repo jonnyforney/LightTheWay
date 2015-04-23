@@ -3,13 +3,7 @@ $.fx.speeds.xslow = 3000; // 'xslow' means 3 seconds
 $.fx.speeds.xfast = 100; // 'xfast' means 0.1 seconds
 
 // set styles with jquery to overwrite jquery mobile
-$('#username').parent('div').removeAttr('class');
-$('#password').parent('div').removeAttr('class');
-$('#username').parent('div').css('width', '50%');
-$('#password').parent('div').css('width', '50%');
-$('#username').parent('div').css('line-height', '1px');
-$('#username').css('line-height', '10px');
-$('#password').parent('div').css('height', '10px');
+this.page.find('.login-input').removeClass('ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset');
 
 document.addEventListener("deviceready",onDeviceReady,false);
 
