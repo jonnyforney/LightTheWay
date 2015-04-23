@@ -1,3 +1,16 @@
+$.fx.speeds.slow = 1500; // 'slow' now means 1.5 seconds
+$.fx.speeds.xslow = 3000; // 'xslow' means 3 seconds
+$.fx.speeds.xfast = 100; // 'xfast' means 0.1 seconds
+
+// set styles with jquery to overwrite jquery mobile
+$('#username').parent('div').removeAttr('class');
+$('#password').parent('div').removeAttr('class');
+$('#username').parent('div').css('width', '50%');
+$('#password').parent('div').css('width', '50%');
+$('#username').parent('div').css('line-height', '1px');
+$('#username').css('line-height', '10px');
+$('#password').parent('div').css('height', '10px');
+
 document.addEventListener("deviceready",onDeviceReady,false);
 
 function onDeviceReady() {
@@ -6,13 +19,13 @@ function onDeviceReady() {
 }
 
 function loadLogo() {
-	$("#logo").hide();
+	$("#load-img").hide();
 	setTimeout(function(){ 
-    	$("#logo").fadeIn("slow");
+    	$("#load-img").fadeIn('slow');
     	setTimeout(function(){ 
     		$('#log').click();
-    	}, 2000);
-    }, 500);
+    	}, 2500);
+    }, 1000);
 }
 
 function addComment() {
