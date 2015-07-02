@@ -3,14 +3,14 @@
 		<script src="js/jquery-2.1.3.min.js"></script>   
 	</head>
 	<body>
-        <div data-role="page" id="load" class="load-blank">
+  			<div data-role="page" id="load" class="load-blank">
             <img src="img/load.png" id="load-img" class="hundred" />
             <a href="#login" id="log" class="hide"></a> 
         </div> 
 
         <div data-role="page" id="login" class="bg-cyan center"> 
             <img src="img/logo.png" id="logo" class="center-margin" />
-            <form class="clearfix" style="margin: auto;">
+            <form id="main_login" class="clearfix" style="margin: auto;" data-ajax="false" onsubmit="submitControl(this.id)">
                 <h3 style="color: white;">Login</h3>   
                 <ul> 
                     <li>        
@@ -20,26 +20,28 @@
                         <input type="password" id="password" name="password" placeholder="password" class="login-input" data-role="none" />
                     </li>
                 </ul>
-                <a href="#create" id="new_user" onclick="" style="">new user?</a>
+                <input type="submit" data-role="none" style="visibility: hidden; position: absolute;" />
+                <a href="#create" id="new_user" data-transition="none">new user?</a>
+                <a href="#home" id="login_go" class="hide"></a>
             </form>
         </div> 
 
         <div data-role="page" id="create" class="bg-cyan center"> 
             <img src="img/logo.png" id="logo" class="center-margin" />
-            <form class="clearfix" style="margin: auto;" onsubmit="alert('hi')">
+            <form id="new_user_form" class="clearfix" style="margin: auto;" data-ajax="false" onsubmit="submitControl(this.id)">
                 <h3 style="color: white;">Login</h3>   
                 <ul> 
                     <li>        
-                        <input type="text" id="username" name="username" placeholder="username" class="login-input" style="padding-top: 0px;" data-role="none" required />
+                        <input type="text" id="username_set" name="username_set" placeholder="username" class="login-input" style="padding-top: 0px;" data-role="none" required />
                     </li>                    
                     <li>
-                        <input type="password" id="password" name="password" placeholder="password" class="login-input" data-role="none" />
+                        <input type="password" id="password_set" name="password_set" placeholder="password" class="login-input" data-role="none" />
                     </li>
                     <li>
-                        <input type="password" id="password" name="password" placeholder="password" class="login-input" data-role="none" />
+                        <input type="password" id="password_confirm" name="password_confirm" placeholder="retype password" class="login-input" data-role="none" />
                     </li>                    
                 </ul>
-                <a href="#load" id="new_user" onclick="loadLogo()" style="">Create</a>
+                <a href="#home" id="new_user" onclick=" " style="">Create</a>
             </form>
         </div>         
 
@@ -51,7 +53,7 @@
                         the 
                         <span class="cyan">Way</span>
                     </a>
-                </h1>            
+                </h1>
             </div>
         	<div class="nav">
                 <div class="nav-section left bg-orange" onclick="show(1)"></div>
@@ -62,8 +64,8 @@
             </div>
         	<div class="display"></div>                        
             <div data-role="footer" class="footer">                
-                <form id="comment_form" onsubmit="addComment()">
-                    <input type="text" id="comment" name="comment" placeholder="Comment" />  
+                <form id="comment_form" onsubmit="submitControl(this.id)" data-ajax="false">
+                    <input type="text" id="comment" name="comment" placeholder="Comment" /> 
                 </form>         
             </div>        
         </div>

@@ -1,15 +1,44 @@
 $.fx.speeds.slow = 1500; // 'slow' now means 1.5 seconds
 $.fx.speeds.xslow = 3000; // 'xslow' means 3 seconds
 $.fx.speeds.xfast = 100; // 'xfast' means 0.1 seconds
-
-// set styles with jquery to overwrite jquery mobile
-this.page.find('.login-input').removeClass('ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset');
-
+jQuery.fn.invisible = function() {
+    return this.css('visibility', 'hidden');
+};
+$('#submit_main').invisible();
 document.addEventListener("deviceready",onDeviceReady,false);
 
+// remove classes to make custom inputs
+this.page.find('.login-input').removeClass('ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset');
+
 function onDeviceReady() {
+    window.localStorage.removeItem("comments");
     StatusBar.hide();
     loadLogo();
+}
+
+function submitControl(id) {
+    switch(id) {
+        case 'main_login':
+            submitMainLogin();
+            break;
+        case 'new_user_form':
+            alert('hi');
+            createNewUser();
+            break;
+        case 'comment_form':
+            addComment();
+            break;
+    }
+}
+
+function submitMainLogin() {
+    var form = $("#main_login");
+    event.preventDefault();
+    $('#username').blur();
+    $('#password').blur();
+    $('#login_go').click();
+    return false;
+    
 }
 
 function loadLogo() {
@@ -23,8 +52,31 @@ function loadLogo() {
 }
 
 function addComment() {
-	var comment = $('#comment').val();
-	window.localStorage.setItem("comments",comment);
+    event.preventDefault(); 
+    var input = $('#comment');
+    var comment = input.val();
+    var prev_comments = window.localStorage.getItem("comments");
+    if(prev_comments != '' && prev_comments != 'null' && !!prev_comments) {
+        comment = prev_comments + ' ' + comment;
+    }
+    window.localStorage.setItem("comments",comment);    
+    input.blur();
+    input.val('');
+    refreshComments();
+    return false;
+}
+
+function refreshComments() {
+    var comments = window.localStorage.getItem("comments");
+    $('.display').html(comments);
+    $('#display').removeClass('hide');
+}
+
+function createNewUser() {
+    event.preventDefault(); 
+    var user = $('#username_set').val();
+    alert(user);
+    return false;
 }
 
 function checkUser() {

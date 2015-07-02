@@ -1,0 +1,23 @@
+{
+  "name": "LightTheWay",
+  "version": "1.0.0",
+  "description": "Mobile App 5k charity run",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.13.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jdog1994/LightTheWay.git"
+  },
+  "author": "Jonny Forney",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jdog1994/LightTheWay/issues"
+  },
+  "homepage": "https://github.com/jdog1994/LightTheWay"
+}
